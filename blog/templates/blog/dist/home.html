@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Home</h1>
+    {% for post in posts %}
+        <div style="display: inline-block;
+         padding:20px;
+         background-color: cyan;
+         border-style: solid;
+         border-radius: 20px;
+         margin:14px ">
+            <h1>{{post.poster}}</h1>
+            <h2>{{post.title}}</h2>
+            <p>{{post.content}}</p>
+            <h1>{{post.post_date}}</h1>
+        </div>
+    {% endfor%}
+{% endblock %}
